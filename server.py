@@ -8,5 +8,4 @@ sock.listen(1)
 while True:
     (clientsocket, address) = sock.accept()
     mes = sock.recv(1024)
-    clientsocket.sendto(b(mes))
-    
+    clientsocket.sendto(mes)

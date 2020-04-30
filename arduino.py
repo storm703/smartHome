@@ -1,4 +1,4 @@
-import ardunino_interface
+import arduino_interface
 
 class Arduino_Rolladen:
 
@@ -6,7 +6,7 @@ class Arduino_Rolladen:
         self.ID = id
         self.NAME = name
         self.closed = 0 # 0 -> open, # 100 -> closed
-        
+
 
     def update(self):
         self.closed = ardunino_interface.get(self.ID)

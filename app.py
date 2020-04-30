@@ -1,10 +1,10 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from arduino import Arduino_Rolladen
 import arduino_interface
 
 app = Flask(__name__)
 
-ards = [Arduino_Rolladen(0, "Wohnzimmer 1")]
+ards = [Arduino_Rolladen(0, "Wohnzimmer 1"),Arduino_Rolladen(1, "Wohnzimmer 2"), Arduino_Rolladen(3, "Pauls Zimmer")]
 
 @app.route('/')
 def index():
@@ -22,6 +22,13 @@ def open(id):
 def close(id):
     #arduino_interface.set(id, 100)
     return redirect('/')
+
+@app.route('/set/<int:id>')
+def set(id):
+    p = int(request.args['p'])
+    #arduino_inteface.set(id, p)
+    return redirect('/')
+
 
 
 

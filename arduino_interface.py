@@ -19,7 +19,7 @@ def set(id, closed): # 100 -> geschlossen ; 0 -> offen
     MESSAGE = b'IDFFFFFFFFFFFFFLength'
     sock.sendto(MESSAGE, ard_cont_addr)
 
-def get():
+def get(id):
     MESSAGE = b'IDFFFFFFFFFFLength'
     sock.sendto(MESSAGE, ard_cont_addr)
     #TODO: Listen

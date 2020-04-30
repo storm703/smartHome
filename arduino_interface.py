@@ -23,3 +23,9 @@ def get():
     MESSAGE = b'IDFFFFFFFFFFLength'
     sock.sendto(MESSAGE, ard_cont_addr)
     #TODO: Listen
+    #sock.listen(1)
+
+    # accept connections from outside
+    #(clientsocket, address) = serversocket.accept()
+    #closed = sock.recv(2048)
+    #return closed

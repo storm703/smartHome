@@ -9,7 +9,7 @@ sock.sendto(MESSAGE, (IP, PORT))
 
 """
 local_addr = ('localhost', 11000)
-ard_cont_addr = ('192.168.178.22', 7000)
+ard_cont_addr = ('192.168.178.178', 31415)
 
 
 

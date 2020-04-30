@@ -15,10 +15,6 @@ ard_cont_addr = ('192.168.178.178', 31415)
 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-#sock.bind(local_addr)
-MESSAGE = b'Hello World'
-for i in range(20):
-    sock.sendto(MESSAGE, ard_cont_addr)
 
 def set(closed): # 100 -> geschlossen ; 0 -> offen
     MESSAGE = b'IDFFFFFFFFFFFFFLength'

@@ -1,17 +1,16 @@
+import ardunino_interface
+
 class Arduino_Rolladen:
 
-    def __init__(self, id):
+    def __init__(self, id,name ):
         self.ID = id
-        self.rolladen_hight = none
+        self.NAME = name
+        self.closed = 0 # 0 -> open, # 100 -> closed
+        
 
-    def set_hight(self, hight):
-        #an arduino senden
-        pass
+    def update(self):
+        self.closed = ardunino_interface.get(self.ID)
 
-    def get_hight(self):
-        hight = 0
-        #höhe abfragen
-        return get_hight
-
-    def get_id(self):
-        return self.ID
+    def set_closed(self, p):
+        ardunino_interface.set(self.ID, p)
+        # ??? self.update()

@@ -9,8 +9,4 @@ class Arduino_Rolladen:
 
 
     def update(self):
-        self.closed = ardunino_interface.get(self.ID)
-
-    def set_closed(self, p):
-        ardunino_interface.set(self.ID, p)
-        # ??? self.update()
+        self.closed = arduino_interface.get(self.ID)

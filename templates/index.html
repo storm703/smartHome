@@ -12,9 +12,31 @@
       <th> ID </th>
       <th> Name </th>
       <th> Status </th>
-      <th> Input </th>
+
       <th> Commands </th>
     </tr>
+
+    {% for a in ards %}
+    <tr>
+      <td>
+        {{ a.ID}}
+      </td>
+      <td>
+        {{ a.NAME}}
+      </td>
+      <td>
+        {{ a.closed }} %
+      </td>
+      <td>
+        <a href="/open/{{ a.ID }}">OPEN</a> <br>
+        <a href="/close/{{ a.ID }}">CLOSE</a> <br>
+      
+
+      </td>
+
+    </tr>
+    {% endfor %}
+
 
   </table>
 {% endblock %}

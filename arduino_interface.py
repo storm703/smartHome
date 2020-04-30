@@ -23,6 +23,7 @@ def get():
     MESSAGE = b'IDFFFFFFFFFFLength'
     sock.sendto(MESSAGE, ard_cont_addr)
     #TODO: Listen
+    #sock.bind("localhost", 12345)???????????
     #sock.listen(1)
 
     # accept connections from outside

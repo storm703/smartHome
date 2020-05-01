@@ -28,7 +28,9 @@ class System():
         print(list)
         print(dict)
 
-
+    def updateAll(self):
+        for c in self.list:
+            c.update()
 
 
     def getByType(self, type):

@@ -6,6 +6,9 @@ class Component():
     def toString(self):
         return self.ID + " " + self.NAME
 
+    def update(self):
+        pass
+
 
 
 class Shutter(Component):

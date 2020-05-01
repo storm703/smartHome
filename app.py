@@ -21,8 +21,6 @@ class System():
         self.list = []
         self.dict = {}
         comps = ComponentDB.query.order_by(ComponentDB.id).all()
-        #dict = ["Shutter":[shutter1 shutter2], "TempSenor": [temp1, temp2]]
-        #arr
 
         for comp in comps:
             print(comp.name + " " + comp.type)

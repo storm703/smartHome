@@ -1,18 +1,22 @@
 from flask import Flask, render_template, redirect, request
-from arduino import Arduino_Rolladen
-import arduino_interface
+
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 
-ards = [Arduino_Rolladen(0, "Wohnzimmer 1"),Arduino_Rolladen(1, "Wohnzimmer 2"), Arduino_Rolladen(3, "Pauls Zimmer")]
+
 
 @app.route('/')
 def index():
+    return "Hallo World"
+    """
     for a in ards:
         pass
         #a.update()
     return render_template('index.html', ards = ards)
+    """
 
+"""
 @app.route('/open/<int:id>')
 def open(id):
     #arduino_interface.set(id, 0)
@@ -31,7 +35,7 @@ def set(id):
 
 
 
-
+"""
 
 
 if __name__ == "__main__":

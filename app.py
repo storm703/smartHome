@@ -1,11 +1,10 @@
 from flask import Flask, render_template, redirect, request
-from components import *
-from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 
+<<<<<<< HEAD
 db = SQLAlchemy(app)
 
 class ComponentDB(db.Model):
@@ -64,13 +63,19 @@ class System():
 
 
 s = System(("0.0.0.0", 700000))
+=======
+>>>>>>> parent of 9dec8d3... Murks
 
 
 @app.route('/')
 def index():
-    s.updateAll()
-    return render_template('index.html', s = s)
-
+    return "Hallo World"
+    """
+    for a in ards:
+        pass
+        #a.update()
+    return render_template('index.html', ards = ards)
+    """
 
 """
 @app.route('/open/<int:id>')
@@ -89,8 +94,9 @@ def set(id):
     #arduino_inteface.set(id, p)
     return redirect('/')
 
-"""
 
+
+"""
 
 
 if __name__ == "__main__":

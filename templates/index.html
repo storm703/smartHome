@@ -16,21 +16,21 @@
       <th> Commands </th>
     </tr>
 
-    {% for shutter in s.getByType("Shutter") %}
+    {% for a in ards %}
     <tr>
       <td>
-        {{ shutter.ID}}
+        {{ a.ID}}
       </td>
       <td>
-        {{ shutter.NAME}}
+        {{ a.NAME}}
       </td>
       <td>
-        {{ shutter.closed }} %
+        {{ a.closed }} %
       </td>
       <td>
-        <a href="/open/{{ shutter.ID }}">OPEN</a> <br>
-        <a href="/close/{{ shutter.ID }}">CLOSE</a> <br>
-        <form action = "/set/{{ shutter.ID }}">
+        <a href="/open/{{ a.ID }}">OPEN</a> <br>
+        <a href="/close/{{ a.ID }}">CLOSE</a> <br>
+        <form action = "/set/{{ a.ID }}">
           <input type="text" id = "p" name = "p"> %
           <input type= "submit" value= "SET"
       </td>

@@ -1,1 +1,2 @@
-# smartHome
+# SmartHome
+ Smarting out Home
